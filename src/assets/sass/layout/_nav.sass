@@ -1,0 +1,38 @@
+.nav
+  box-sizing: border-box
+  position: fixed
+  @include pin(auto, 0, 0, 0)
+  height: $nav__height
+  background-color: var(--color-main-bg)
+  border-top: .1rem solid var(--color-main-border)
+  font-size: .9rem
+  &__list
+    width: 100%
+    height: inherit
+    @include flex(center, center, row)
+    &--item,
+    &--config,
+    &--fav
+      width: 25%
+      box-sizing: border-box
+      flex-shrink: 0
+      @include flex(center, center, row)
+    &--item,
+    &--fav
+      height: inherit
+      border-right: .1rem solid var(--color-main-border)
+    &--item:nth-child(4)
+      border: initial
+    &--fav
+      color: var(--color-red)
+      & > a
+        font-weight: 900
+        @include flex(center, center, column)
+    &--config
+      position: fixed
+      @include pin(0, 0, auto, auto)
+      height: $nav__height
+      background-color: var(--color-main-bg)
+      border:
+        left: .1rem solid var(--color-main-border)
+        bottom: .1rem solid var(--color-main-border)

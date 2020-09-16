@@ -24,3 +24,5 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+public/css/main.min.css
+public/css/main.min.css.map
