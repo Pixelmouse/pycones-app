@@ -1,3 +1,0 @@
-:root{--color-white: #FFFFFF;--color-black: #191919;--color-blue: #306998;--color-red: #BA2123;--color-yellow: #FFD43B;--color-grey-light: #BBBBBB;--color-main-bg: var(--color-black);--color-main-txt: var(--color-white);--color-main-border: var(--color-grey-light);--color-active-bg: var(--color-red)}[data-theme="light"]{--color-main-bg: var(--color-white);--color-main-txt: var(--color-black);--color-main-border: var(--color-black);--color-active-bg: var(--color-blue)}@font-face{font-family:'txt';src:url("../font/FiraCode-VF.woff2");font-weight:200 900;font-style:normal}body{background-color:var(--color-main-bg);color:var(--color-main-txt);font-family:'txt', monospace;font-weight:200}
-
-/*# sourceMappingURL=main.min.css.map */
