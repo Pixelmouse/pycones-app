@@ -1,0 +1,26 @@
+.welcome
+  &__list
+    &--item
+      display: block
+      min-height: $main__size
+      border-bottom: .1rem solid var(--color-main-border)
+      position: relative
+    &--input
+      position: absolute
+      height: 100%
+      width: 100%
+      opacity: 0
+    &--content
+      @include flex(space-between, flex-start, row)
+    &--lang
+      @include flex(flex-start, center, row)
+      min-height: $main__size
+      width: calc(100% - #{$main__size})
+      box-sizing: border-box
+      padding: $padding__secondary $padding__main
+      border-right: .1rem solid var(--color-main-border)
+      font-size: $font__subtittle
+    &--flag
+      font-size: 1.5rem
+      margin-right: $padding__secondary
+      padding-top: .25rem
