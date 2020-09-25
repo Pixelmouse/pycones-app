@@ -72,8 +72,12 @@ input[type='checkbox'] {
     cursor: pointer;
 }
 
+/* Remove default style */
 /* iOS: remove zoom double tap */
 button {
+    background-color: transparent;
+    border: unset;
+    padding: unset;
     touch-action: manipulation;
 }
 

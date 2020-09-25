@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
-    <Header/>
-    <router-view/>
+  <div id="app" >
+    <div
+      data-theme="dark"
+      class="body"
+    >
+      <Header/>
+      <router-view/>
+    </div>
   </div>
 </template>
 
