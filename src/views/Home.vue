@@ -1,7 +1,8 @@
 <template>
   <div class="home">
+
     <p>
-      hola
+
     </p>
     <Navigation/>
   </div>

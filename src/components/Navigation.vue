@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__list--item">
+      <li class="nav__list--item nav__active">
         <router-link :to="{ name: '/' }">
           _main
         </router-link>

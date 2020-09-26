@@ -1,9 +1,21 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div id="app" >
+    <div
+      data-theme="dark"
+      class="body"
+    >
+      <Header/>
+      <router-view/>
+    </div>
   </div>
 </template>
 
-<style lang="sass">
+<script>
+import Header from '@/components/Header.vue'
 
-</style>
+export default {
+  components: {
+    Header
+  }
+}
+</script>

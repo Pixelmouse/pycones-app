@@ -43,6 +43,11 @@ th {
     border: 1px solid black;
 }
 
+/* Input: remove border radius */
+input {
+    border-radius: 0;
+}
+
 /* Firefox: remove inner focus ring */
 button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -67,8 +72,12 @@ input[type='checkbox'] {
     cursor: pointer;
 }
 
+/* Remove default style */
 /* iOS: remove zoom double tap */
 button {
+    background-color: transparent;
+    border: unset;
+    padding: unset;
     touch-action: manipulation;
 }
 

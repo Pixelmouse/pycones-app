@@ -5,7 +5,6 @@
   height: $nav__height
   background-color: var(--color-main-bg)
   border-top: .1rem solid var(--color-main-border)
-  font-size: .9rem
   &__list
     width: 100%
     height: inherit
@@ -26,8 +25,12 @@
     &--fav
       color: var(--color-red)
       & > a
+        box-sizing: border-box
         font-weight: 900
         @include flex(center, center, column)
+        line-height: 35%
+        font-size: 1.1rem
+        padding-bottom: .75rem
     &--config
       position: fixed
       @include pin(0, 0, auto, auto)
@@ -36,3 +39,7 @@
       border:
         left: .1rem solid var(--color-main-border)
         bottom: .1rem solid var(--color-main-border)
+  &__active
+    background-color: var(--color-active-bg)
+    & > a
+      color: var(--color-yellow)
