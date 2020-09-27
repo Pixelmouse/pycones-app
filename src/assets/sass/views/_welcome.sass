@@ -1,9 +1,13 @@
 .welcome
+  position: relative
   &__lang-list
+    position: absolute
+    top: 0
+    width: 100%
     &--item
       display: block
       min-height: $main__size
-      border-bottom: .1rem solid var(--color-main-border)
+      border-bottom: $border__main
       position: relative
     &--input
       position: absolute
@@ -18,39 +22,20 @@
       width: calc(100% - #{$main__size})
       box-sizing: border-box
       padding: $padding__secondary $padding__main
-      border-right: .1rem solid var(--color-main-border)
+      border-right: $border__main
       font-size: $font__subtittle
     &--flag
       font-size: 1.5rem
       margin-right: $padding__secondary
       padding-top: .25rem
   &__pref-list
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(3, minmax(#{$main__size}, auto))
-    &--dark-mode,
-    &--light-mode
-      @include flex(flex-start, center, row)
-      position: relative
-      border-bottom: .1rem solid var(--color-main-border)
-      box-sizing: border-box
-      padding: $padding__secondary $padding__main
-      & > input
-        position: absolute
-        @include pin(0, 0, 0, 0)
-        width: 100%
-        height: 100%
-        opacity: 0
-    &--dark-mode
-      background-color: var(--color-black)
-      color: var(--color-white)
-    &--light-mode
-      background-color: var(--color-white)
-      color: var(--color-black)
+    position: absolute
+    top: 0
+    width: 100%
     &--start,
     &--return
       grid-column: 1 / 3
-      border-bottom: .1rem solid var(--color-main-border)
+      border-bottom: $border__main
       a,
       button
         display: grid
@@ -61,13 +46,13 @@
           padding: $padding__secondary $padding__main
           @include flex(flex-start, center, row)
         & > .return
-          border-left: .1rem solid var(--color-main-border)
+          border-left: $border__main
     &--return
       & > button
         grid-template-columns: $main__size 1fr
         width: 100%
         & > .return
-          border-right: .1rem solid var(--color-main-border)
+          border-right: $border__main
         & > span:last-child
           padding: $padding__secondary $padding__main
           @include flex(flex-start, center, row)

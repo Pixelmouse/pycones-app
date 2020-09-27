@@ -1,162 +1,163 @@
 <template>
   <div class="welcome">
-    <ul
-      v-if="step1"
-      class="welcome__lang-list"
+    <transition
+      :name="`carousel-${carouselTransition}`"
     >
-      <li>
-        <label class="welcome__lang-list--item">
-          <input
-            type="radio"
-            name="lang"
-            class="welcome__lang-list--input"
-            @click="nextStep"
-          >
-          <p class="welcome__lang-list--content">
-            <span class="welcome__lang-list--lang">
-              <span class="welcome__lang-list--flag">
-                🇪🇸
+      <!-- welcome choose language view -->
+      <ul
+        v-if="step1"
+        key="step-1"
+        class="welcome__lang-list"
+      >
+        <li>
+          <label class="welcome__lang-list--item">
+            <input
+              type="radio"
+              name="lang"
+              class="welcome__lang-list--input"
+              @click="nextStep"
+            >
+            <p class="welcome__lang-list--content">
+              <span class="welcome__lang-list--lang">
+                <span class="welcome__lang-list--flag">
+                  🇪🇸
+                </span>
+                Bienvenido
               </span>
-              Bienvenido
-            </span>
-            <span class="return">
-              -&gt;
-            </span>
-          </p>
-        </label>
-      </li>
-      <li>
-        <label class="welcome__lang-list--item">
-          <input
-            type="radio"
-            name="lang"
-            class="welcome__lang-list--input"
-            @click="nextStep"
-          >
-          <p class="welcome__lang-list--content">
-            <span class="welcome__lang-list--lang">
-              <span class="welcome__lang-list--flag">
-                🇬🇧
+              <span class="return">
+                -&gt;
               </span>
-              Welcome
-            </span>
-            <span class="return">
-              -&gt;
-            </span>
-          </p>
-        </label>
-      </li>
-      <li>
-        <label class="welcome__lang-list--item">
-          <input
-            type="radio"
-            name="lang"
-            class="welcome__lang-list--input"
-            @click="nextStep"
-          >
-          <p class="welcome__lang-list--content">
-            <span class="welcome__lang-list--lang">
-              <span class="welcome__lang-list--flag">
-                🇩🇪
+            </p>
+          </label>
+        </li>
+        <li>
+          <label class="welcome__lang-list--item">
+            <input
+              type="radio"
+              name="lang"
+              class="welcome__lang-list--input"
+              @click="nextStep"
+            >
+            <p class="welcome__lang-list--content">
+              <span class="welcome__lang-list--lang">
+                <span class="welcome__lang-list--flag">
+                  🇬🇧
+                </span>
+                Welcome
               </span>
-              Willkommen
-            </span>
-            <span class="return">
-              -&gt;
-            </span>
-          </p>
-        </label>
-      </li>
-      <li>
-        <label class="welcome__lang-list--item">
-          <input
-            type="radio"
-            name="lang"
-            class="welcome__lang-list--input"
-            @click="nextStep"
-          >
-          <p class="welcome__lang-list--content">
-            <span class="welcome__lang-list--lang">
-              <span class="welcome__lang-list--flag">
-                🇷🇺
+              <span class="return">
+                -&gt;
               </span>
-              Добропожаловать
-            </span>
-            <span class="return">
-              -&gt;
-            </span>
-          </p>
-        </label>
-      </li>
-    </ul>
+            </p>
+          </label>
+        </li>
+        <li>
+          <label class="welcome__lang-list--item">
+            <input
+              type="radio"
+              name="lang"
+              class="welcome__lang-list--input"
+              @click="nextStep"
+            >
+            <p class="welcome__lang-list--content">
+              <span class="welcome__lang-list--lang">
+                <span class="welcome__lang-list--flag">
+                  🇩🇪
+                </span>
+                Willkommen
+              </span>
+              <span class="return">
+                -&gt;
+              </span>
+            </p>
+          </label>
+        </li>
+        <li>
+          <label class="welcome__lang-list--item">
+            <input
+              type="radio"
+              name="lang"
+              class="welcome__lang-list--input"
+              @click="nextStep"
+            >
+            <p class="welcome__lang-list--content">
+              <span class="welcome__lang-list--lang">
+                <span class="welcome__lang-list--flag">
+                  🇷🇺
+                </span>
+                Добропожаловать
+              </span>
+              <span class="return">
+                -&gt;
+              </span>
+            </p>
+          </label>
+        </li>
+      </ul>
+      <!-- .welcome choose language view -->
 
-    <ul
-      v-if="step2"
-      class="welcome__pref-list"
-    >
-      <li class="welcome__pref-list--dark-mode">
-        <input
-          type="radio"
-          name="mode"
-        >
-        <p>
-          _modoOscuro
-        </p>
-      </li>
-      <li class="welcome__pref-list--light-mode">
-        <input
-          type="radio"
-          name="mode"
-        >
-        <p>
-          _modoClaro
-        </p>
-      </li>
-      <li class="welcome__pref-list--start">
-        <router-link
-          :to="{ name: 'Home' }"
-        >
-          <span>
-            Empezar
-          </span>
-          <span class="return">
-            -&gt;
-          </span>
-        </router-link>
-      </li>
-      <li class="welcome__pref-list--return">
-        <button
-          @click="prevStep"
-        >
-          <span class="return">
-            &lt;-
-          </span>
-          <span>
-            Volver
-          </span>
-        </button>
-      </li>
-    </ul>
+      <!-- welcome config view -->
+      <ul
+        v-if="step2"
+        key="step-2"
+        class="welcome__pref-list"
+      >
+        <ConfigMode/>
+        <li class="welcome__pref-list--start">
+          <router-link
+            :to="{ name: 'Home' }"
+          >
+            <span>
+              Empezar
+            </span>
+            <span class="return">
+              -&gt;
+            </span>
+          </router-link>
+        </li>
+        <li class="welcome__pref-list--return">
+          <button
+            @click="prevStep"
+          >
+            <span class="return">
+              &lt;-
+            </span>
+            <span>
+              Volver
+            </span>
+          </button>
+        </li>
+      </ul>
+      <!-- .welcome config view -->
+    </transition>
   </div>
 </template>
 
 <script>
+import ConfigMode from '@/components/ConfigMode.vue'
+
 export default {
   name: 'Welcome',
+  components: {
+    ConfigMode
+  },
   data: function () {
     return {
       step1: true,
-      step2: false
+      step2: false,
+      carouselTransition: 'next'
     }
   },
   methods: {
     nextStep: function () {
       this.step1 = false
       this.step2 = true
+      this.carouselTransition = 'next'
     },
     prevStep: function () {
       this.step1 = true
       this.step2 = false
+      this.carouselTransition = 'prev'
     }
   }
 }
