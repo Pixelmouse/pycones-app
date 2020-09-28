@@ -1,7 +1,7 @@
 <template>
   <div id="app" >
     <div
-      data-theme="dark"
+      :data-theme="$store.state.mode"
       class="body"
     >
       <Header/>
