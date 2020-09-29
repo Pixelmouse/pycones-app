@@ -79,6 +79,7 @@ button {
     border: unset;
     padding: unset;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* iOS && Firefox: remove default input appearince */

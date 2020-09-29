@@ -4,7 +4,6 @@
   @include pin(auto, 0, 0, 0)
   height: $nav__height
   background-color: var(--color-main-bg)
-  border-top: $border__main
   &__list
     width: 100%
     height: inherit
@@ -19,9 +18,11 @@
     &--item,
     &--fav
       height: inherit
-      border-right: $border__main
+      border:
+        right: $border__main
+        top: $border__main
     &--item:nth-child(4)
-      border: initial
+      border-right: initial
     &--fav
       color: var(--color-red)
       & > a
