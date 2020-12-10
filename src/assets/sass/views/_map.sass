@@ -1,0 +1,17 @@
+.map
+  &__legend
+    position: fixed
+    @include pin(auto, 0, #{$main__size}, 0)
+    &--toggle
+      @include flex(flex-start, center, row)
+      box-sizing: border-box
+      width: 100%
+      text-align: left
+      border-top: $border__main
+      height: $main__size
+      & > p
+        box-sizing: border-box
+        width: calc(100% - #{$main__size})
+        padding: $padding__secondary $padding__main
+      & > div
+        border-left: $border__main

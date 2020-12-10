@@ -16,7 +16,7 @@
         </router-link>
       </li>
       <li class="nav__list--item">
-        <router-link :to="{ name: '/' }">
+        <router-link :to="{ name: '/map' }">
           _mapa
         </router-link>
       </li>
