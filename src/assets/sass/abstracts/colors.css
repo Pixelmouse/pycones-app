@@ -12,6 +12,8 @@
     --color-main-txt: var(--color-white);
     --color-main-border: var(--color-grey-light);
     --color-active-bg: var(--color-red);
+    --color-fav-txt: var(--color-yellow);
+    --color-fav-bg: var(--color-blue);
 }
 
 [data-theme="light"] {
@@ -20,4 +22,6 @@
     --color-main-txt: var(--color-black);
     --color-main-border: var(--color-black);
     --color-active-bg: var(--color-blue);
+    --color-fav-txt: var(--color-blue);
+    --color-fav-bg: var(--color-yellow);
 }

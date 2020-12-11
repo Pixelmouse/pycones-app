@@ -1,5 +1,8 @@
 <template>
-  <nav class="nav">
+  <nav
+    v-if="!$store.state.hideNav"
+    class="nav"
+  >
     <ul class="nav__list">
       <li class="nav__list--item nav__active">
         <router-link :to="{ name: '/' }">
@@ -16,7 +19,7 @@
         </router-link>
       </li>
       <li class="nav__list--item">
-        <router-link :to="{ name: '/' }">
+        <router-link :to="{ name: 'Map' }">
           _mapa
         </router-link>
       </li>
@@ -26,7 +29,7 @@
         </router-link>
       </li>
       <li class="nav__list--config">
-        <router-link :to="{ name: '/' }">
+        <router-link :to="{ name: 'Config' }">
           _config
         </router-link>
       </li>
