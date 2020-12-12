@@ -36,17 +36,11 @@
         </li>
       </ol>
     </div>
-    <Navigation/>
   </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation.vue'
-
-export default {
-  name: 'Map',
-  components: {
-    Navigation
+  export default {
+    name: 'Map'
   }
-}
 </script>

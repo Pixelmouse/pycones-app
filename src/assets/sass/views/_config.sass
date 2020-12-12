@@ -19,6 +19,7 @@
       top: $border__main
       bottom: $border__main
       left: $border__main
+    transition: $transition__main
     & > input
       position: absolute
       top: 0
@@ -26,3 +27,7 @@
       height: 100%
       width: 100%
       opacity: 0
+
+  &__active-lang
+    background-color: var(--color-fav-bg)
+    color: var(--color-fav-txt)

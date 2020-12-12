@@ -6,16 +6,19 @@
     >
       <Header/>
       <router-view/>
+      <Navigation/>
     </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Navigation from '@/components/Navigation.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Navigation
   }
 }
 </script>
