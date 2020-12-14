@@ -5,7 +5,9 @@
       class="body"
     >
       <Header/>
-      <router-view/>
+      <transition name="change-view">
+        <router-view/>
+      </transition>
       <Navigation/>
     </div>
   </div>

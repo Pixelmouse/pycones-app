@@ -13,26 +13,12 @@
         </div>
       </button>
       <ol class="map__legend--list">
-        <li class="map__legend--list-item">
-          <button>Lorem.</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Animi.</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Quam.</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Asperiores.</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Excepturi.</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Beatae?</button>
-        </li>
-        <li class="map__legend--list-item">
-          <button>Hic?</button>
+        <li
+          v-for="(location, index) in locations"
+          :key="index"
+          class="map__legend--list-item"
+        >
+          <button>{{ index }}: {{ location }}</button>
         </li>
       </ol>
     </div>
@@ -40,7 +26,26 @@
 </template>
 
 <script>
-  export default {
-    name: 'Map'
+import Store from '@/store/index.ts'
+
+export default {
+  name: 'Map',
+  store: Store,
+  data () {
+    return {
+      locations: [
+        'Lorem',
+        'Animi',
+        'Quam',
+        'Asperiores',
+        'Excepturi',
+        'Beatae',
+        'Hic'
+      ]
+    }
+  },
+  beforeMount () {
+    this.$store.commit('changeActiveMenu', 'map')
   }
+}
 </script>

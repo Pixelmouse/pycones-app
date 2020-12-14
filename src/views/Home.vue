@@ -8,7 +8,13 @@
 </template>
 
 <script>
+import Store from '@/store/index.ts'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  store: Store,
+  beforeMount () {
+    this.$store.commit('changeActiveMenu', 'main')
+  }
 }
 </script>

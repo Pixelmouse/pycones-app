@@ -77,9 +77,11 @@
 // @ is an alias to /src
 import Navigation from '@/components/Navigation.vue'
 import ConfigMode from '@/components/ConfigMode.vue'
+import Store from '@/store/index.ts'
 
 export default {
   name: 'Home',
+  store: Store,
   components: {
     Navigation,
     ConfigMode
@@ -88,6 +90,9 @@ export default {
     return {
       langSelected: 'es'
     }
+  },
+  beforeMount () {
+    this.$store.commit('changeActiveMenu', 'config')
   }
 }
 </script>

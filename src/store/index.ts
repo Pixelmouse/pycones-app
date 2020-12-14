@@ -8,7 +8,9 @@ export default new Vuex.Store({
     // choose theme colors
     mode: 'dark',
     // hide nav
-    hideNav: false
+    hideNav: false,
+    // active menu
+    activeMenu: 'main'
   },
   mutations: {
     changeMode (state, value) {
@@ -16,6 +18,9 @@ export default new Vuex.Store({
     },
     hideNav (state, value) {
       state.hideNav = value
+    },
+    changeActiveMenu (state, value) {
+      state.activeMenu = value
     }
   },
   actions: {
