@@ -17,9 +17,26 @@
         border-left: $border__main
     &--list
       display: grid
+      grid-auto-flow: column
       grid-template-columns: repeat(2, 1fr)
-      border-top: $border__main solid var(--color-main-border)
-    &--list-item:nth-child(odd)
-      grid-column: 1 / 2
-    &--list-item:nth-child(even)
-      grid-column: 2 / 3
+      grid-column-gap: $padding__main
+      grid-row-gap: $padding__small
+      padding: $padding__secondary $padding__main
+    &--list-wrapper
+      overflow: hidden
+      transition: height $transition__main
+      max-height: 40vh
+      overflow-y: auto
+      border-top: $border__main
+    &--list-item
+      height: 100%
+      width: 100%
+      text-align: left
+      padding:
+        top: $padding__small
+        bottom: $padding__small
+    &--arrow
+      transform: scale(1) rotate(-90deg)
+      transition: $transition__main
+    &--open
+      transform: scale(-1) rotate(-90deg)
