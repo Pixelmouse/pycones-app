@@ -1,7 +1,12 @@
 .map
+  box-sizing: border-box
+  &__main
+    height: 100%
   &__legend
     position: fixed
     @include pin(auto, 0, #{$main__size}, 0)
+    background-color: var(--color-main-bg)
+    z-index: 1000
     &--toggle
       @include flex(flex-start, center, row)
       box-sizing: border-box
@@ -17,10 +22,8 @@
         border-left: $border__main
     &--list
       display: grid
-      grid-auto-flow: column
-      grid-template-columns: repeat(2, 1fr)
-      grid-column-gap: $padding__main
-      grid-row-gap: $padding__small
+      grid-template-columns: 1fr
+      grid-gap: $padding__secondary
       padding: $padding__secondary $padding__main
     &--list-wrapper
       overflow: hidden
@@ -35,6 +38,9 @@
       padding:
         top: $padding__small
         bottom: $padding__small
+      @include flex(flex-start, flex-start, row)
+      & > span
+        margin-right: $padding__small
     &--arrow
       transform: scale(1) rotate(-90deg)
       transition: $transition__main
