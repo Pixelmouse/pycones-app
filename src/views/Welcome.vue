@@ -135,9 +135,11 @@
 
 <script>
 import ConfigMode from '@/components/ConfigMode.vue'
+import Store from '@/store/index.ts'
 
 export default {
   name: 'Welcome',
+  store: Store,
   components: {
     ConfigMode
   },
@@ -148,7 +150,13 @@ export default {
       carouselTransition: 'next'
     }
   },
+  beforeMount () {
+    this.hideNav(true)
+  },
   methods: {
+    hideNav: function (bool) {
+      this.$store.commit('hideNav', bool)
+    },
     nextStep: function () {
       this.step1 = false
       this.step2 = true
@@ -159,6 +167,9 @@ export default {
       this.step2 = false
       this.carouselTransition = 'prev'
     }
+  },
+  destroyed () {
+    this.hideNav(false)
   }
 }
 </script>

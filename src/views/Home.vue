@@ -4,18 +4,17 @@
     <p>
 
     </p>
-    <Navigation/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Navigation from '@/components/Navigation.vue'
+import Store from '@/store/index.ts'
 
 export default {
   name: 'Home',
-  components: {
-    Navigation
+  store: Store,
+  beforeMount () {
+    this.$store.commit('changeActiveMenu', 'main')
   }
 }
 </script>

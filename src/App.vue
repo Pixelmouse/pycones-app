@@ -5,17 +5,22 @@
       class="body"
     >
       <Header/>
-      <router-view/>
+      <transition name="change-view">
+        <router-view/>
+      </transition>
+      <Navigation/>
     </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Navigation from '@/components/Navigation.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Navigation
   }
 }
 </script>
