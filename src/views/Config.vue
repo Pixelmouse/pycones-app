@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <ul>
       <ConfigMode/>
     </ul>
@@ -70,7 +70,7 @@
       </li>
     </ul>
     <Navigation/>
-  </div>
+  </main>
 </template>
 
 <script>

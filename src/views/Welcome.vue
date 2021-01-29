@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome">
+  <main class="welcome">
     <transition
       :name="`carousel-${carouselTransition}`"
     >
@@ -130,7 +130,7 @@
       </ul>
       <!-- .welcome config view -->
     </transition>
-  </div>
+  </main>
 </template>
 
 <script>

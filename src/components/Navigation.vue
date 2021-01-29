@@ -14,9 +14,9 @@
       </li>
       <li
         class="nav__list--fav"
-        :class="{ 'nav__active' : $store.state.activeMenu === 'fav' }"
+        :class="{ 'nav__active' : $store.state.activeMenu === 'favs' }"
       >
-        <router-link :to="{ name: '/' }">
+        <router-link :to="{ name: 'Favs' }">
           <span>, ,</span>
           <span>,,,,</span>
           <span>,,,</span>

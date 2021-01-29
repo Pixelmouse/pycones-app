@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     class="map"
     ref="mapContainer"
   >
@@ -55,7 +55,7 @@
         </div>
       </transition>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

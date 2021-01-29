@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
+  <main class="home">
 
     <p>
 
     </p>
-  </div>
+  </main>
 </template>
 
 <script>
